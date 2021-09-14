@@ -1,10 +1,10 @@
 import { NestFactory } from '@nestjs/core';
-import { RootModule } from './root.module';
+import { AppModule } from './app.module';
 
 declare const module: any;
 
 async function bootstrap() {
-  const app = await NestFactory.create(RootModule);
+  const app = await NestFactory.create(AppModule);
   await app.listen(3000);
 
   if (module.hot) {

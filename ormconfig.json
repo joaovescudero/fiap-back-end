@@ -1,0 +1,7 @@
+{
+  type: 'sqlite',
+  database: `${__dirname}/data.sqlite`,
+entities: [__dirname + '/../**/*.entity{.ts,.js}'],
+synchronize: true,
+logging: true,
+}

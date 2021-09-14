@@ -6,7 +6,7 @@ export class RootController {
   constructor(private readonly rootService: RootService) {}
 
   @Get()
-  getRoot(): {} {
+  getRoot(): Record<string, unknown> {
     return this.rootService.getRoot();
   }
 }
