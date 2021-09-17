@@ -27,7 +27,7 @@ export class User {
   @Column({ length: 255, unique: true })
   document: string;
 
-  @Column('datetime')
+  @Column()
   birthday: Date;
 
   @Column({ length: 255, unique: true })
