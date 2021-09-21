@@ -18,10 +18,10 @@ import { UserLocationHistory } from './entites/userLocationHistory.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      database: 'postgres',
-      username: 'postgres',
-      password: 'postgres',
+      host: process.env.HOST || 'localhost',
+      database: process.env.DATABASE || 'postgres',
+      username: process.env.DB_USER || 'postgres',
+      password: process.env.DB_PASSWORD || 'postgres',
       autoLoadEntities: true,
       synchronize: true,
       logging: true,
