@@ -26,12 +26,15 @@ import { UserLocationHistory } from './entites/userLocationHistory.entity';
       synchronize: true,
       logging: true,
       entities: [User, UserResponsible, Place, Plate, UserLocationHistory],
-      ssl: true,
-      extra: {
-        ssl: {
-          rejectUnauthorized: false,
-        },
-      },
+      ssl: process.env.NODE_ENV === 'production',
+      extra:
+        process.env.NODE_ENV === 'production'
+          ? {
+              ssl: {
+                rejectUnauthorized: false,
+              },
+            }
+          : {},
     }),
     UsersModule,
     RootModule,
