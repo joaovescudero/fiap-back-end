@@ -6,6 +6,7 @@ import { RootModule } from './modules/root.module';
 import { UserResponsibleModule } from './modules/user-responsible.module';
 import { User } from './entites/user.entity';
 import { UserResponsible } from './entites/userResponsible.entity';
+import { SessionModule } from './modules/session.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { UserResponsible } from './entites/userResponsible.entity';
     UsersModule,
     RootModule,
     UserResponsibleModule,
+    SessionModule,
   ],
 })
 export class AppModule {}
