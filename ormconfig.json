@@ -1,7 +1,15 @@
 {
-  type: 'sqlite',
-  database: `${__dirname}/data.sqlite`,
-entities: [__dirname + '/../**/*.entity{.ts,.js}'],
-synchronize: true,
-logging: true,
+  "type": "postgres",
+  "host": "localhost",
+  "database": "postgres",
+  "username": "postgres",
+  "password": "postgres",
+  "synchronize": true,
+  "logging": true,
+  "entities": ["src/**/*.entity{.ts,.js}"],
+  "migrationsTableName": "migration_table",
+  "migrations": ["migration/*.js"],
+  "cli": {
+    "migrationsDir": "migration"
+  }
 }

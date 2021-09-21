@@ -9,6 +9,7 @@ import {
 } from 'typeorm';
 
 import { UserResponsible } from './userResponsible.entity';
+import { UserLocationHistory } from './userLocationHistory.entity';
 
 @Entity()
 export class User {
@@ -47,4 +48,10 @@ export class User {
 
   @OneToMany(() => UserResponsible, (userResponsible) => userResponsible.user)
   responsible: UserResponsible;
+
+  @OneToMany(
+    () => UserLocationHistory,
+    (userLocationHistory) => userLocationHistory.user,
+  )
+  userLocationHistory: UserLocationHistory;
 }
