@@ -28,6 +28,9 @@ export class User {
   @Column({ length: 255, unique: true })
   document: string;
 
+  @Column({ nullable: true })
+  isAdmin: boolean;
+
   @Column()
   birthday: Date;
 

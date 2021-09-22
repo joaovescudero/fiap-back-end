@@ -18,6 +18,7 @@ export class UsersService {
     user.password = createUserDto.password;
     user.document = createUserDto.document;
     user.birthday = createUserDto.birthday;
+    user.isAdmin = createUserDto.isAdmin;
     user.mobile = createUserDto.mobile;
     user.isEnabled = createUserDto.isEnabled;
 
