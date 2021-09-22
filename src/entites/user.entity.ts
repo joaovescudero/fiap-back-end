@@ -19,13 +19,13 @@ export class User {
   @Column({ length: 255 })
   name: string;
 
-  @Column({ length: 255, unique: true })
+  @Column({ length: 255 })
   email: string;
 
   @Column({ length: 255 })
   password: string;
 
-  @Column({ length: 255, unique: true })
+  @Column({ length: 255 })
   document: string;
 
   @Column({ nullable: true })
@@ -34,7 +34,7 @@ export class User {
   @Column()
   birthday: Date;
 
-  @Column({ length: 255, unique: true })
+  @Column({ length: 255 })
   mobile: string;
 
   @Column({ default: true })
