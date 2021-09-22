@@ -25,7 +25,7 @@ export class User {
   @Column({ length: 255 })
   password: string;
 
-  @Column({ length: 255, unique: true })
+  @Column({ length: 255, unique: true, nullable: true })
   document: string;
 
   @Column({ nullable: true })
